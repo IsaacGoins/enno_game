@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="enno"
+run/main_scene="uid://cm36bp7vbj0lh"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
