@@ -20,7 +20,7 @@ func on_text_submitted(input):
 		inputs[i] = inputs[i].to_lower()
 	var valid_targets = ["target1", "target2", "target3"]
 	var valid_attributes = ["r", "g", "b"]
-	var level = 9
+	var level = 1
 	var is_valid_value = true
 	var dec_input_value = ""
 	
@@ -29,7 +29,6 @@ func on_text_submitted(input):
 	match command:
 		"set":
 			print("Running set command...")
-			
 			if inputs.size() != 4:
 				print("Too many or not enough arguments!")
 				return 1
@@ -45,14 +44,17 @@ func on_text_submitted(input):
 						if !inputs[3].is_valid_int():
 							print("Invalid desired value!")
 							return 1
+						dec_input_value = inputs[3]
 					2:
 						if !inputs[3].is_valid_int():
 							print("Invalid desired value!")
 							return 1
+						dec_input_value = inputs[3]
 					3:
 						if !inputs[3].is_valid_int():
 							print("Invalid desired value!")
 							return 1
+						dec_input_value = inputs[3]
 					4:
 						if !inputs[3].is_valid_int():
 							print("Invalid desired value!")
@@ -162,7 +164,6 @@ func on_text_submitted(input):
 								hex_input_value = hex_input_value+"f"
 						dec_input_value = hex_input_value.hex_to_int()
 						print(dec_input_value)
-						
 					9:
 						var hex_chars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"]
 						for i in inputs[3]:
@@ -197,9 +198,10 @@ func on_text_submitted(input):
 								dec_input_value = dec_input_value+str(8)
 							if int(i) == 6:
 								dec_input_value = dec_input_value+str(9)
-						print("Woo")
-						print(dec_input_value)
-						
+				if int(dec_input_value) > 255 or int(dec_input_value) < 0:
+					print("Desired value out of range!")
+					return 1
+				get_tree().root.get_child(0).change_value(inputs[1], inputs[2], int(dec_input_value))
 								
 						
 		
@@ -212,6 +214,7 @@ func on_text_submitted(input):
 			if !(inputs[1] in valid_targets) or !(inputs[2] in valid_targets):
 				print("Invalid target!")
 				return 1
+			get_tree().root.get_child(0).swap_images(inputs[1], inputs[2])
 		_:
 			pass
 			print("Unrecognized command \"%s\"" % inputs[0])

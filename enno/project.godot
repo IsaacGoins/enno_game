@@ -11,6 +11,6 @@ config_version=5
 [application]
 
 config/name="enno"
-run/main_scene="res://User Input/user_input.tscn"
+run/main_scene="uid://d4cd2ha6wssyx"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
