@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://vwtdrlbcvyh6"]
+
+[ext_resource type="Texture2D" uid="uid://bbd1kfay7ut2o" path="res://textures/level5/img1.png" id="1_b3501"]
+[ext_resource type="Texture2D" uid="uid://xdqub6onu2nv" path="res://textures/level5/img2.png" id="2_fj68v"]
+[ext_resource type="Texture2D" uid="uid://clro6h8mg13rs" path="res://textures/level5/img3.png" id="3_ggu74"]
+[ext_resource type="Texture2D" uid="uid://dwkulypljxd7t" path="res://textures/level5/img4.png" id="4_4omtb"]
+[ext_resource type="Texture2D" uid="uid://m6ku82ropp6c" path="res://textures/level5/img5.png" id="5_kdpyi"]
+[ext_resource type="Texture2D" uid="uid://uc56gtjsrdsm" path="res://textures/level5/img6.png" id="6_h1e6x"]
+
+[node name="Level5" type="GridContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="img1" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_b3501")
+
+[node name="img2" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_fj68v")
+
+[node name="img3" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_ggu74")
+
+[node name="img4" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("4_4omtb")
+
+[node name="img5" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("5_kdpyi")
+
+[node name="img6" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("6_h1e6x")

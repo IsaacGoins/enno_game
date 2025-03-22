@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4gvmthvneybl"]
+
+[ext_resource type="Texture2D" uid="uid://dwncbnj6jtlxl" path="res://textures/level1.png" id="1_r87cj"]
+
+[node name="GridContainer" type="GridContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Img1" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(550, 550)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_r87cj")

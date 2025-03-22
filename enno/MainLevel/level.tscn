@@ -1,10 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://d4cd2ha6wssyx"]
 
 [ext_resource type="PackedScene" uid="uid://c4ihsnw5v1n3r" path="res://User Input/user_input.tscn" id="1_o6mkr"]
-[ext_resource type="Script" uid="uid://c00dloj83svi" path="res://Level/level.gd" id="1_qmtf6"]
+[ext_resource type="Script" uid="uid://c00dloj83svi" path="res://MainLevel/level.gd" id="1_qmtf6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qmtf6"]
-bg_color = Color(0.314316, 0.314316, 0.314316, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6mkr"]
 
@@ -32,7 +31,7 @@ dragging_enabled = false
 layout_mode = 2
 dragging_enabled = false
 
-[node name="Panel" type="Panel" parent="CanvasLayer/HBoxContainer/VBoxContainer"]
+[node name="Panel" type="PanelContainer" parent="CanvasLayer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 

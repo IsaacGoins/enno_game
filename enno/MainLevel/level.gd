@@ -6,9 +6,6 @@ extends Control
 @onready var ui_g_value = $CanvasLayer/HBoxContainer/Sidebar/VBoxContainer/MarginContainer3/HBoxContainer/PanelContainer/MarginContainer/g_value
 @onready var ui_b_value = $CanvasLayer/HBoxContainer/Sidebar/VBoxContainer/MarginContainer4/HBoxContainer/PanelContainer/MarginContainer/b_value
 
-var r_value = 255
-var g_value = 255
-var b_value = 255
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,16 +14,17 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
+	pass
 	
 	# update ui
-	ui_r_value.text = str(r_value)
-	ui_b_value.text = str(b_value)
-	ui_g_value.text = str(g_value)
+	#ui_r_value.text = str()
+	#ui_b_value.text = str()
+	#ui_g_value.text = str()
 
 
 func load_level(level):
 	user_input.level = level
+	
 
 func change_value(target, attribute, value):
 	pass
