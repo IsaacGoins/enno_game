@@ -20,7 +20,7 @@ func on_text_submitted(input):
 		inputs[i] = inputs[i].to_lower()
 	var valid_targets = ["target1", "target2", "target3"]
 	var valid_attributes = ["r", "g", "b"]
-	var level = 8
+	var level = 9
 	var is_valid_value = true
 	var dec_input_value = ""
 	
@@ -126,7 +126,6 @@ func on_text_submitted(input):
 						var hex_input_value = ""
 						for i in inputs[3]:
 							if !(i in hex_chars):
-								print(i)
 								print("Invalid desired value!")
 								return 1
 							if int(i) == 1:
@@ -163,10 +162,46 @@ func on_text_submitted(input):
 								hex_input_value = hex_input_value+"f"
 						dec_input_value = hex_input_value.hex_to_int()
 						print(dec_input_value)
+						
 					9:
-						pass
-					10:
-						pass
+						var hex_chars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"]
+						for i in inputs[3]:
+							if !(i in hex_chars):
+								print("Invalid desired value!")
+								return 1
+						var binary_input = inputs[3].hex_to_int()
+						binary_input = str(binary_input)
+						for i in binary_input:
+							if i != "0" and i != "1":
+								print("Invalid desired value!")
+								return 1
+						var precy_dec_input_value = bin_to_dec(binary_input)
+						for i in str(precy_dec_input_value):
+							if int(i) == 7:
+								dec_input_value = dec_input_value+str(0)
+							if int(i) == 2:
+								dec_input_value = dec_input_value+str(1)
+							if int(i) == 9:
+								dec_input_value = dec_input_value+str(2)
+							if int(i) == 4:
+								dec_input_value = dec_input_value+str(3)
+							if int(i) == 1:
+								dec_input_value = dec_input_value+str(4)
+							if int(i) == 0:
+								dec_input_value = dec_input_value+str(5)
+							if int(i) == 8:
+								dec_input_value = dec_input_value+str(6)
+							if int(i) == 5:
+								dec_input_value = dec_input_value+str(7)
+							if int(i) == 3:
+								dec_input_value = dec_input_value+str(8)
+							if int(i) == 6:
+								dec_input_value = dec_input_value+str(9)
+						print("Woo")
+						print(dec_input_value)
+						
+								
+						
 		
 		"swap":
 			print("Running swap command...")
